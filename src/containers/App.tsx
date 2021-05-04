@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import './App.css';
 import HomePage from './HomePage';
 import Preview from "./Preview";
 
-class App extends Component {
+const App = () => {
   
-  render(){
     return(
       <Router>
         <div className="App">
@@ -18,7 +17,6 @@ class App extends Component {
       </Router>
      
     )
-};
 }
 
 export default App;

@@ -2,16 +2,16 @@ import React from "react";
 import Employee from "./Employee";
 
 
-interface Person{
+export interface Person{
     id: number
     name: string;
     email: string;
 }
 
 const EmployeeList: React.FC<{ Employees: any}> = ({Employees}) => {
-    
+
     return(
-        <div className="flex flex-wrap p-3">
+        <div className="flex flex-wrap lg:flex-wrap p-3">
             {
                 
                 Employees.map((Person: Person, i:number) => {

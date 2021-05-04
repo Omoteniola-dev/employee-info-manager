@@ -1,15 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import { SearchProps } from "./TopNav"
 
-
-const SearchBox: React.FC<{}> = () => {
-    const [Text, setText] = useState<string>("");
-    const SearchChange = (e: React.ChangeEvent<HTMLInputElement>):void =>{ 
-        console.log(e.currentTarget.value);   
-        return setText(e.currentTarget.value);
-    }
+const SearchBox: React.FC<SearchProps> = ({Text, SearchChange}) => {
     
     return(
-        <div>
+        <div className="b-2 text-blue m-4">
             <input type="search" value={Text} onChange={SearchChange} />
         </div>
     )
