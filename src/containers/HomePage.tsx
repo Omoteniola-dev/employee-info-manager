@@ -9,7 +9,6 @@ const HomePage: React.FC<{}> = () => {
     const [Employees, setEmployees] = useState([]);
 
     const SearchChange = (e: React.ChangeEvent<HTMLInputElement>):void =>{ 
-        console.log(e.currentTarget.value);   
         return setText(e.currentTarget.value);
     }
     
