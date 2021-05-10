@@ -4,6 +4,7 @@ import './App.css';
 import HomePage from './HomePage';
 import Preview from "./Preview";
 import CreateProfile from "./CreateProfile";
+import LogIn from "../components/CreateProfile/LogIn"
 
 const App = () => {
   
@@ -14,6 +15,7 @@ const App = () => {
                 <Route path="/" exact component={Preview} />
                 <Route path="/homepage" component={HomePage} />
                 <Route path="/createprofile" component={CreateProfile} />
+                <Route path="/login" component={LogIn} />
             </Switch>
       </div>
       </Router>
