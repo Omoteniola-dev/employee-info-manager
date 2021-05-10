@@ -48,7 +48,7 @@ class Form extends Component<{}, any> {
                 <input type="text" name="Password" value={profile.Password} placeholder="Password" className="p-3 m-4 border-gray-400 border-b-2 bg-blue-100" onChange={handleChange}/>
 
                 <input type="submit" value="Create Profile" className="p-3 bg-blue-500 font-bold m-3 rounded-xl w-4/5 lg:hover:bg-blue-600"/>
-                <small>Already have an account? <Link to="/" className="text-blue-400">Log in</Link></small>
+                <small>Already have an account? <Link to="/login" className="text-blue-400">Log in</Link></small>
             </form>
         </div>
     )
