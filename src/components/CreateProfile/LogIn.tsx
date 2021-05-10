@@ -8,9 +8,10 @@ const LogIn = () => {
     }
     const [details, setDetails] = useState(profile)
 
+    // the handleChange function to handle the state of the input field
     const handleChange = (e: any) => {
-        e.preventDefault();
-        details[e.target.name] = e.currentTarget.value;
+        e.preventDefault(); //makes sure the page doesn't reload
+        details[e.target.name] = e.currentTarget.value; //sets the state of the corresponding key-value pair as the input.name
         setDetails({ details })
     }
     return(
