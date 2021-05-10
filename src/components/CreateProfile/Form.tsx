@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-
+//Declaring the type of State
 type State = {
     profile:{
         Firstname: "",
@@ -33,6 +33,7 @@ class Form extends Component<{}, any> {
     render(){
         const { profile } = this.state;
         
+        //handleChange function to handle the change of the input field
         const handleChange = (e: any) =>{
         e.preventDefault();
         profile[e.target.name] = e.currentTarget.value
@@ -40,7 +41,7 @@ class Form extends Component<{}, any> {
     }
         return (
         <div className="w-full lg:w-1/2 h-full">
-            <form className="bg-blue-100 m-4 lg:w-1/2 lg:h-1/2 p-6">
+            <form className="bg-blue-100 m-4 lg:w-1/2 lg:h-1/2 p-6 rounded-xl">
                 <input type="text" name="Firstname" value={profile.Firstname} placeholder="Firstname" className="p-3 m-4 border-gray-400 border-b-2 bg-blue-100" onChange={handleChange}/>
                 <input type="text" name="Lastname" value={profile.Lastname} placeholder="Lastname" className="p-3 m-4 border-gray-400 border-b-2 bg-blue-100" onChange={handleChange}/>
                 <input type="text" name="Email" value={profile.Email} placeholder="Email" className="p-3 m-4 border-gray-400 border-b-2 bg-blue-100" onChange={handleChange}/>
