@@ -39,9 +39,13 @@ class Form extends Component<{}, any> {
         profile[e.target.name] = e.currentTarget.value
         return this.setState({ profile})
     }
+        const handleSubmit = (e: any) => {
+            e.preventDefault()
+            return console.log("Form submitted")
+        }
         return (
         <div className="w-full lg:w-1/2 h-full">
-            <form className="bg-blue-100 m-4 lg:w-1/2 lg:h-1/2 p-6 rounded-xl">
+            <form className="bg-blue-100 m-4 lg:w-1/2 lg:h-1/2 p-6 rounded-xl" onSubmit={handleSubmit}>
                 <input type="text" name="Firstname" value={profile.Firstname} placeholder="Firstname" className="p-3 m-4 border-gray-400 border-b-2 bg-blue-100" onChange={handleChange}/>
                 <input type="text" name="Lastname" value={profile.Lastname} placeholder="Lastname" className="p-3 m-4 border-gray-400 border-b-2 bg-blue-100" onChange={handleChange}/>
                 <input type="text" name="Email" value={profile.Email} placeholder="Email" className="p-3 m-4 border-gray-400 border-b-2 bg-blue-100" onChange={handleChange}/>
