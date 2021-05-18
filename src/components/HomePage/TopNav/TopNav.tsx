@@ -11,7 +11,7 @@ const TopNav: React.FC<SearchProps> = ({Text, SearchChange}) => {
         <div className="flex flex-row justify-between">
             <img src="" alt="Company Logo" />
             <p>Icon</p>
-            <SearchBox Text={Text} SearchChange={SearchChange} opt={opt} optChange={optChange} />
+            <SearchBox Text={Text} SearchChange={SearchChange} />
         </div>
     )
 }
