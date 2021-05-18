@@ -6,6 +6,7 @@ export interface Person{
     id: number
     name: string;
     email: string;
+    opt: any
 }
 
 const EmployeeList: React.FC<{ Employees: any}> = ({Employees}) => {
