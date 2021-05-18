@@ -6,11 +6,10 @@ import EmploList from "./Employees.json"
 interface EmployeeType {
     Employees: any,
     setEmployees: any,
-    Text: string,
-    opt: string
+    Text: string
 }
 
-const RenderBox: React.FC<EmployeeType> = ({Employees, setEmployees, Text, opt}) => {
+const RenderBox: React.FC<EmployeeType> = ({Employees, setEmployees, Text}) => {
     // fetch("https://jsonplaceholder.typicode.com/users")
     //         .then(response => response.json())
     //         .then(data => setEmployees(data))
@@ -21,7 +20,7 @@ const RenderBox: React.FC<EmployeeType> = ({Employees, setEmployees, Text, opt})
     //     return Employee.name.toLowerCase().includes(Text.toLowerCase())
     // })
     const filteredList = Employees.filter((Employee: Person) =>{
-        return Employee.opt.toLowerCase().includes(Text.toLowerCase())
+        return Employee.name.toLowerCase().includes(Text.toLowerCase())
     })
     return(
         <div>
