@@ -1,14 +1,20 @@
 import React from "react";
 import Form from "../components/CreateProfile/Form"
-import Aside from "../components/CreateProfile/Aside"
+import CSS from "csstype"
 const CreateProfile: React.FC<{}> = () => {
+    const style: CSS.Properties = {
+        position: "relative",
+        top: "50%",
+        left: "25%",
+    }
     return(
         <div className="m-2">
-            <p className="text-lg lg:text-3xl leading-track">Create a new user profile</p>
-            <div className="flex flex-wrap justify-center">
+            <p className="text-lg lg:text-4xl leading-track font-extrabold text-white ">Create a new user profile</p>
+            <div className="lg:relative top-2.5 left-5 ">
                 <Form />
-                <Aside />
             </div>
+                
+                {/* <Aside /> */}
             
         </div>
     )
