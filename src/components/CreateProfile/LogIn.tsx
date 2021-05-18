@@ -17,8 +17,9 @@ const LogIn = () => {
     return(
         <div>
             <h1> Login page </h1>
-            <div className="w-full lg:w-1/2 h-full">
-            <form className="bg-blue-100 m-4 lg:w-1/2 lg:h-1/2 p-6">
+            <div className="w-full lg:w-3/4 h-full">
+            <form className="bg-blue-100 m-4 rounded-xl lg:w-1/2 lg:h-1/2 p-6">
+                <p className="font-bold text-right lg:text-3xl">Log in</p>
                 <input type="text" name="Username" value={details.username} placeholder="Username" className="p-3 m-4 border-gray-400 border-b-2 bg-blue-100" onChange={handleChange}/>
                 <input type="text" name="Password" value={details.password} placeholder="Password" className="p-3 m-4 border-gray-400 border-b-2 bg-blue-100" onChange={handleChange}/>
 
